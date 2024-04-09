@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responde Preguntas Escolares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logotipo" class="logo">
+        <h1>¿Quieres buscar el significado de algo?</h1>
+      
+        <div class="question-form">
+            <input type="text" id="question-input" placeholder="Haz una pregunta...">
+            <button id="submit-btn">Enviar</button>
+        </div>
+        <div class="answer" id="answer"></div>
+        <div class="centered-button">
+            <span id="subjects-btn">•Descargar libros de texto</span> <!-- Botón "Descargar libros de texto" -->
+            <br>
+            <span id="help-btn">•Inteligencia Artificial ¿Necesitas ayuda?</span> <!-- Botón "¿Necesitas ayuda?" -->
+            <br>
+            <span id="courses-btn">•Área de cursos en línea</span> <!-- Nuevo botón "Área de cursos en línea" -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("courses-btn").addEventListener("click", function() {
+            window.location.href = "cursos.html"; // Reemplaza "cursos.html" por la ruta de tu página de cursos
+        });
+    </script>
+</body>
+</html>

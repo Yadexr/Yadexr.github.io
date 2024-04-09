@@ -1,0 +1,163 @@
+/* Estilos CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Color de fondo */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* Color del contenedor */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #1877f2; /* Color del encabezado */
+}
+
+.question-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 120px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1877f2; /* Color del botón */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #166fe5; /* Color del botón al pasar el ratón */
+}
+
+.answer {
+    padding: 20px;
+    background-color: #fff; /* Color del contenedor de respuestas */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px; /* Ajusta el margen según sea necesario */
+    width: 100px; /* Ancho más pequeño para el logotipo */
+    height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+}
+
+.answer p {
+    margin-bottom: 10px; /* Separación entre párrafos en la respuesta */
+}
+
+.answer p:nth-child(odd) {
+    background-color: #f9f9f9; /* Color de fondo alternativo para párrafos impares */
+    padding: 8px; /* Espaciado interno */
+    border-radius: 4px; /* Borde redondeado */
+}
+
+.answer p:nth-child(even) {
+    border-left: 4px solid #1877f2; /* Borde izquierdo de color para párrafos pares */
+    padding-left: 8px; /* Espaciado interno para compensar el borde */
+}
+
+/* Estilo para los enlaces de asignaturas */
+ul > li > a {
+    display: block;
+    color: #333;
+    background-color: #FFC0CB; /* Color rosa */
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover para los enlaces */
+ul > li > a:hover {
+    background-color: #FFB6C1; /* Color rosa más claro al pasar el ratón */
+}
+
+/* Estilo para los enlaces de los grados */
+ul > li > ul > li > a {
+    display: block;
+    color: #333;
+    background-color: #FFFF00; /* Color amarillo */
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover para los enlaces de los grados */
+ul > li > ul > li > a:hover {
+    background-color: #FFD700; /* Color amarillo más claro al pasar el ratón */
+}
+
+/* Estilo para el contenedor de la imagen */
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la imagen */
+.centered-image {
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+/* Estilo para el enlace del PDF */
+.pdf-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFFF00; /* Color amarillo */
+    color: #000; /* Color de texto negro */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover para el enlace del PDF */
+.pdf-link a:hover {
+    background-color: #FFD700; /* Color amarillo más claro al pasar el ratón */
+}
+
+/* Estilos para centrar el botón */
+.centered-button {
+    text-align: left;
+    margin-top: 20px; /* Espacio entre el formulario y el botón */
+}
+
+/* Estilos para el botón */
+#subjects-btn, #help-btn, #courses-btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: #1877f2; /* Color del botón */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Espacio entre los botones */
+}
+
+#subjects-btn:hover, #help-btn:hover, #courses-btn:hover {
+    background-color: #166fe5; /* Color del botón al pasar el ratón */
+}
