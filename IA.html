@@ -11,11 +11,11 @@
         <img src="logo.png" alt="Logotipo" class="logo">
         <h1>¿Quieres buscar el significado de algo?</h1>
       
-        <div class="question-form">
-            <input type="text" id="question-input" placeholder="Haz una pregunta...">
-            <button id="submit-btn">Enviar</button>
-        </div>
-        <div class="answer" id="answer"></div>
+        <!-- Código para la búsqueda con Wikipedia API -->
+        <h2>Búsqueda con Wikipedia API</h2>
+        <input type="text" id="searchInput" placeholder="Ingrese su consulta">
+        <ul id="results"></ul>
+        
         <div class="centered-button">
             <span id="subjects-btn">•Descargar libros de texto</span> <!-- Botón "Descargar libros de texto" -->
             <br>
@@ -23,10 +23,78 @@
             <br>
             <span id="courses-btn">•Área de cursos en línea</span> <!-- Nuevo botón "Área de cursos en línea" -->
             <br>
-            <button id="back-btn">•Volver a la pagina anterior</button> <!-- Botón para regresar a la página anterior -->
+            <button id="back-btn">•Volver a la página anterior</button> <!-- Botón para regresar a la página anterior -->
         </div>
     </div>
-    
+
     <script src="script.js"></script>
+
+    <script>
+        function buscarWikipedia(query) {
+            var url = 'https://es.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + encodeURIComponent(query) + '&format=json&origin=*';
+            fetch(url)
+                .then(response => response.json())
+                .then(data => mostrarResultados(data.query.search))
+                .catch(error => console.error('Error al buscar en Wikipedia:', error));
+        }
+
+        function mostrarResultados(resultados) {
+            var resultsList = document.getElementById('results');
+            resultsList.innerHTML = '';
+
+            if (resultados.length === 0) {
+                resultsList.innerHTML = '<li>No se encontraron resultados.</li>';
+            } else {
+                resultados.forEach(function(resultado) {
+                    var listItem = document.createElement('li');
+                    var snippet = resultado.snippet.replace(/<[^>]*>/g, ''); // Elimina etiquetas HTML del extracto
+                    listItem.innerHTML = '<a href="https://es.wikipedia.org/wiki/' + encodeURIComponent(resultado.title) + '" target="_blank">' + resultado.title + '</a><br>' + snippet;
+                    resultsList.appendChild(listItem);
+                });
+            }
+        }
+
+        // Manejar la entrada del usuario y realizar la búsqueda
+        var searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', function(event) {
+            var query = event.target.value;
+            buscarWikipedia(query);
+        });
+
+        // Event listeners para los botones
+        document.getElementById('subjects-btn').addEventListener('click', function() {
+            // Tu código para el botón de descargar libros de texto
+        });
+
+        document.getElementById('help-btn').addEventListener('click', function() {
+            // Tu código para el botón de inteligencia artificial
+        });
+
+        document.getElementById('courses-btn').addEventListener('click', function() {
+            // Tu código para el botón de cursos en línea
+        });
+
+        document.getElementById('back-btn').addEventListener('click', function() {
+            window.history.back(); // Regresar a la página anterior
+        });
+
+document.getElementById("subjects-btn").addEventListener("click", function() {
+    window.location.href = "asignaturas.html";
+});
+
+document.getElementById("help-btn").addEventListener("click", function() {
+    window.location.href = "chatgpt.html";
+});
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("courses-btn").addEventListener("click", function() {
+        window.location.href = "cursos.html"; // Reemplaza "cursos.html" por la ruta de tu página de cursos
+    });
+
+    // Función para regresar a la página index.html
+    document.getElementById("back-btn").addEventListener("click", function() {
+        window.location.href = "index.html";
+    });
+});
+    </script>
 </body>
 </html>
