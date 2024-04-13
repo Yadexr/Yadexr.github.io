@@ -17,6 +17,8 @@
         <ul id="results"></ul>
         
         <div class="centered-button">
+          <span id="books-btn">•Buscador de libros</span> <!-- Botón "Buscar libros" -->
+            <br>
             <span id="subjects-btn">•Descargar libros de texto</span> <!-- Botón "Descargar libros de texto" -->
             <br>
             <span id="help-btn">•Inteligencia Artificial ¿Necesitas ayuda?</span> <!-- Botón "¿Necesitas ayuda?" -->
@@ -60,6 +62,10 @@
             var query = event.target.value;
             buscarWikipedia(query);
         });
+    // Event listeners para los botones
+        document.getElementById('books-btn').addEventListener('click', function() {
+            // Tu código para el botón de descargar libros de texto
+        });
 
         // Event listeners para los botones
         document.getElementById('subjects-btn').addEventListener('click', function() {
@@ -80,6 +86,10 @@
 
 document.getElementById("subjects-btn").addEventListener("click", function() {
     window.location.href = "asignaturas.html";
+});
+
+document.getElementById("books-btn").addEventListener("click", function() {
+    window.location.href = "books.html";
 });
 
 document.getElementById("help-btn").addEventListener("click", function() {

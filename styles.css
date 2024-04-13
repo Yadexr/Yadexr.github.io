@@ -146,7 +146,7 @@ ul > li > ul > li > a:hover {
 }
 
 /* Estilos para el botón */
-#subjects-btn, #help-btn, #courses-btn {
+#subjects-btn, #help-btn, #courses-btn, #books-btn{
     display: block;
     padding: 10px 20px;
     background-color: #1877f2; /* Color del botón */
@@ -158,6 +158,7 @@ ul > li > ul > li > a:hover {
     margin-bottom: 10px; /* Espacio entre los botones */
 }
 
-#subjects-btn:hover, #help-btn:hover, #courses-btn:hover {
+
+#subjects-btn:hover, #help-btn:hover, #courses-btn:hover, #books-btn-hover {
     background-color: #166fe5; /* Color del botón al pasar el ratón */
 }
