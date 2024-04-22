@@ -88,8 +88,8 @@
 document.getElementById('searchForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Evitar que el formulario se envíe
   const titulo = document.getElementById('titulo').value;
-  // Enlace directo a Project Gutenberg para buscar libros en dominio público
-  window.location.href = `https://www.gutenberg.org/ebooks/search/?query=${encodeURIComponent(titulo)}`;
+  // Enlace a Open Library para buscar libros
+  window.location.href = `https://openlibrary.org/search?title=${encodeURIComponent(titulo)}`;
 });
 </script>
 
